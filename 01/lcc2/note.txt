@@ -1,4 +1,0 @@
-iterations:
-slow: 4
-medium: 20
-fast: 50

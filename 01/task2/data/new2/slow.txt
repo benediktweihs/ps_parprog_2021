@@ -1,0 +1,2 @@
+#Threads	Time	Time	Time	Time	Time	Time	Time	Time	Time	Time	TotalTime
+1 	0.7829 	0.8045 	0.7967 	0.8027 	0.8053 	0.8050 	0.8056 	0.8868 	

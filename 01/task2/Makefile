@@ -1,4 +1,4 @@
-CFLAGS=-Wall -Wextra -Werror -std=gnu11 -pedantic -fopenmp
+CFLAGS=-Wall -Wextra -Werror -std=gnu11 -pedantic -fopenmp -O2 -O3
 CC=gcc
 RM=rm
 RMFLAGS=-rf
