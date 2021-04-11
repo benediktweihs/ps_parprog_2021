@@ -1,0 +1,211 @@
+pi \approx 3.141434
+
+ Performance counter stats for './piParallel 1':
+
+         50,028.34 msec task-clock:u              #    1.000 CPUs utilized
+                 0      context-switches:u        #    0.000 K/sec
+                 0      cpu-migrations:u          #    0.000 K/sec
+               192      page-faults:u             #    0.004 K/sec
+   123,670,882,833      cycles:u                  #    2.472 GHz                      (50.00%)
+    60,953,114,173      instructions:u            #    0.49  insn per cycle           (75.00%)
+    17,500,950,801      branches:u                #  349.821 M/sec                    (75.00%)
+            98,152      branch-misses:u           #    0.00% of all branches          (75.00%)
+
+      50.032352774 seconds time elapsed
+
+      50.028168000 seconds user
+       0.001000000 seconds sys
+
+
+  Loading gcc/8.2.0
+gcc -std=gnu11 -Wall -Wextra -lm piParallel.c -o piParallel -lpthread
+pi \approx 3.141711
+
+ Performance counter stats for './piSerial 500000000':
+
+         16,382.60 msec task-clock:u              #    1.000 CPUs utilized
+                 0      context-switches:u        #    0.000 K/sec
+                 0      cpu-migrations:u          #    0.000 K/sec
+               159      page-faults:u             #    0.010 K/sec
+    40,506,327,728      cycles:u                  #    2.473 GHz                      (49.99%)
+    58,953,819,456      instructions:u            #    1.46  insn per cycle           (75.00%)
+    15,500,552,977      branches:u                #  946.160 M/sec                    (75.00%)
+            67,765      branch-misses:u           #    0.00% of all branches          (75.00%)
+
+      16.384428982 seconds time elapsed
+
+      16.382369000 seconds user
+       0.001002000 seconds sys
+
+
+pi \approx 3.142697
+
+ Performance counter stats for './piParallel 1':
+
+            501.89 msec task-clock:u              #    0.995 CPUs utilized
+                 0      context-switches:u        #    0.000 K/sec
+                 0      cpu-migrations:u          #    0.000 K/sec
+               193      page-faults:u             #    0.385 K/sec
+     1,238,951,886      cycles:u                  #    2.469 GHz                      (49.82%)
+       609,492,442      instructions:u            #    0.49  insn per cycle           (74.96%)
+       174,908,151      branches:u                #  348.498 M/sec                    (75.16%)
+             7,808      branch-misses:u           #    0.00% of all branches          (75.03%)
+
+       0.504251336 seconds time elapsed
+
+       0.501765000 seconds user
+       0.001002000 seconds sys
+
+
+pi \approx 3.141824
+
+ Performance counter stats for './piParallel 2':
+
+         18,686.50 msec task-clock:u              #    1.997 CPUs utilized
+                 0      context-switches:u        #    0.000 K/sec
+                 0      cpu-migrations:u          #    0.000 K/sec
+               194      page-faults:u             #    0.010 K/sec
+    12,293,656,550      cycles:u                  #    0.658 GHz                      (49.96%)
+       938,374,337      instructions:u            #    0.08  insn per cycle           (74.99%)
+       250,580,883      branches:u                #   13.410 M/sec                    (75.04%)
+        37,842,157      branch-misses:u           #   15.10% of all branches          (75.00%)
+
+       9.359194566 seconds time elapsed
+
+       6.524758000 seconds user
+      12.172651000 seconds sys
+
+
+pi \approx 3.139750
+
+ Performance counter stats for './piParallel 3':
+
+          4,838.48 msec task-clock:u              #    2.374 CPUs utilized
+                 0      context-switches:u        #    0.000 K/sec
+                 0      cpu-migrations:u          #    0.000 K/sec
+               197      page-faults:u             #    0.041 K/sec
+     3,716,741,291      cycles:u                  #    0.768 GHz                      (49.34%)
+       644,757,851      instructions:u            #    0.17  insn per cycle           (74.64%)
+       186,818,976      branches:u                #   38.611 M/sec                    (75.00%)
+         6,830,378      branch-misses:u           #    3.66% of all branches          (75.66%)
+
+       2.037957544 seconds time elapsed
+
+       2.019283000 seconds user
+       3.201883000 seconds sys
+
+
+pi \approx 3.142356
+
+ Performance counter stats for './piParallel 4':
+
+          6,822.76 msec task-clock:u              #    2.641 CPUs utilized
+                 0      context-switches:u        #    0.000 K/sec
+                 0      cpu-migrations:u          #    0.000 K/sec
+               199      page-faults:u             #    0.029 K/sec
+     4,697,893,318      cycles:u                  #    0.689 GHz                      (49.83%)
+       669,188,573      instructions:u            #    0.14  insn per cycle           (74.91%)
+       190,228,856      branches:u                #   27.882 M/sec                    (75.30%)
+         8,835,301      branch-misses:u           #    4.64% of all branches          (74.88%)
+
+       2.583799666 seconds time elapsed
+
+       2.475516000 seconds user
+       5.052631000 seconds sys
+
+
+pi \approx 3.141373
+
+ Performance counter stats for './piParallel 5':
+
+         13,424.28 msec task-clock:u              #    3.511 CPUs utilized
+                 0      context-switches:u        #    0.000 K/sec
+                 0      cpu-migrations:u          #    0.000 K/sec
+               201      page-faults:u             #    0.015 K/sec
+     7,704,920,834      cycles:u                  #    0.574 GHz                      (50.30%)
+       673,679,194      instructions:u            #    0.09  insn per cycle           (75.27%)
+       192,176,744      branches:u                #   14.316 M/sec                    (74.87%)
+        11,651,684      branch-misses:u           #    6.06% of all branches          (74.83%)
+
+       3.823345572 seconds time elapsed
+
+       3.951833000 seconds user
+      11.562938000 seconds sys
+
+
+pi \approx 3.141646
+
+ Performance counter stats for './piParallel 6':
+
+         18,460.56 msec task-clock:u              #    4.083 CPUs utilized
+                 0      context-switches:u        #    0.000 K/sec
+                 0      cpu-migrations:u          #    0.000 K/sec
+               203      page-faults:u             #    0.011 K/sec
+     9,194,929,187      cycles:u                  #    0.498 GHz                      (50.21%)
+       685,901,550      instructions:u            #    0.07  insn per cycle           (74.85%)
+       194,337,679      branches:u                #   10.527 M/sec                    (74.81%)
+        13,574,101      branch-misses:u           #    6.98% of all branches          (74.98%)
+
+       4.521127453 seconds time elapsed
+
+       4.792679000 seconds user
+      16.628261000 seconds sys
+
+
+pi \approx 3.140734
+
+ Performance counter stats for './piParallel 7':
+
+         22,139.38 msec task-clock:u              #    4.602 CPUs utilized
+                 0      context-switches:u        #    0.000 K/sec
+                 0      cpu-migrations:u          #    0.000 K/sec
+               205      page-faults:u             #    0.009 K/sec
+     9,913,622,119      cycles:u                  #    0.448 GHz                      (49.55%)
+       690,478,090      instructions:u            #    0.07  insn per cycle           (74.78%)
+       195,047,152      branches:u                #    8.810 M/sec                    (75.09%)
+        14,473,930      branch-misses:u           #    7.42% of all branches          (75.36%)
+
+       4.811339630 seconds time elapsed
+
+       5.099175000 seconds user
+      20.481520000 seconds sys
+
+
+pi \approx 3.142741
+
+ Performance counter stats for './piParallel 8':
+
+         27,047.38 msec task-clock:u              #    5.125 CPUs utilized
+                 0      context-switches:u        #    0.000 K/sec
+                 0      cpu-migrations:u          #    0.000 K/sec
+               207      page-faults:u             #    0.008 K/sec
+    10,613,989,788      cycles:u                  #    0.392 GHz                      (50.32%)
+       698,631,243      instructions:u            #    0.07  insn per cycle           (75.12%)
+       197,739,349      branches:u                #    7.311 M/sec                    (74.78%)
+        16,375,164      branch-misses:u           #    8.28% of all branches          (74.90%)
+
+       5.277224968 seconds time elapsed
+
+       5.517043000 seconds user
+      25.427000000 seconds sys
+
+
+  Loading gcc/8.2.0
+make: Nothing to be done for `all'.
+pi \approx 3.140778
+
+ Performance counter stats for './piParallel 8':
+
+         28,128.52 msec task-clock:u              #    5.193 CPUs utilized
+                 0      context-switches:u        #    0.000 K/sec
+                 0      cpu-migrations:u          #    0.000 K/sec
+               208      page-faults:u             #    0.007 K/sec
+    10,993,577,822      cycles:u                  #    0.391 GHz                      (50.01%)
+       701,638,476      instructions:u            #    0.06  insn per cycle           (75.08%)
+       197,116,843      branches:u                #    7.008 M/sec                    (74.98%)
+        16,394,647      branch-misses:u           #    8.32% of all branches          (75.01%)
+
+       5.416520574 seconds time elapsed
+
+       5.592720000 seconds user
+      26.668155000 seconds sys

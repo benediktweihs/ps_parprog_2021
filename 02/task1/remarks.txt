@@ -1,0 +1,6 @@
+parallel executino should not be a problem for this problem
+all iterations are completely independent from each other
+each process could be assigned to a certain (range of) pixel(s)
+
+parallel implementation could be faster
+further performance improvements could be gained by using optimization flags
