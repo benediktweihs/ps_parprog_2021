@@ -4,7 +4,7 @@
 #include <pthread.h>
 #include "common.h"
 
-#define ITER 500000000
+#define ITER 50000000
 
 typedef struct passData {
     int iterations;

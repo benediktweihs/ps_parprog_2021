@@ -12,11 +12,11 @@
 int calcIter(int iter){
     double randX, randY;
     int counter = 0;
-    srand ( time ( NULL));
+    unsigned int seed = time(NULL);
 
     for(int i = 0; i < iter; i++){
-        randX = (double)rand()/RAND_MAX;
-        randY = (double)rand()/RAND_MAX;
+        randX = (double) rand_r(&seed)/RAND_MAX;
+        randY = (double) rand_r(&seed)/RAND_MAX;
         counter += (int) (randX*randX + randY*randY);  // hope that randX!=1.!=randY
     }
 

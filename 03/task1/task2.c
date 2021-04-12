@@ -9,14 +9,17 @@
 
 int main(int argc, char* argv[]){
     if(argc != 2) exit(EXIT_FAILURE);
-    int iter = atoi(argv[1]);
+    int num_threads = omp_get_num_threads();
+    int iter = atoi(argv[1]) / num_threads;
     int totalIter = 0;
-    double randX, randY;
+
+    double startTime = omp_get_wtime();
 
     #pragma omp parallel
     {
         unsigned int seed = time(NULL);
         int counter = 0;
+        double randX, randY;
 
         #pragma omp for
         for(int i = 0; i < iter; i++) {
@@ -25,12 +28,13 @@ int main(int argc, char* argv[]){
             counter += (int)(randX * randX + randY * randY); // hope that randX!=1.!=randY
         }
 
-        #pragma omp critical
+        #pragma omp atomic
 		totalIter += counter;
     }
-    int num_threads = omp_get_num_threads();
+    double endTime = omp_get_wtime();
 
-    double pi = 4*((double) (num_threads*iter-totalIter)/(double) (num_threads*iter));
+    double pi = 4*((double) (iter-totalIter)/(double) (iter));
 
-    printf("pi \\approx %f\n", pi);
+    //printf("pi \\approx %f\n", pi);
+    printf("Time = %2.4f at pi = %2.6f\n", endTime-startTime, pi);
 }
