@@ -36,4 +36,4 @@ int main(void){
 
 // sockets: 2.940524742
 
-//cores: 2.940753859
+// cores: 2.940753859

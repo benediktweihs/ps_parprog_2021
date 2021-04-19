@@ -5,6 +5,7 @@ execute_process(COMMAND module load gcc/8.2.0)
 set(CMAKE_C_FLAGS "-std=gnu11 -O3")
 set(SOURCES1 ./task1/example.c)
 set(SOURCES2 ./task2/flush.c)
+set(SOURCES3 ./task3/merge_recursive.c)
 
 find_package(OpenMP)
 if (OPENMP_FOUND)
@@ -13,3 +14,4 @@ endif()
 
 add_executable(task1 ${SOURCES1})
 add_executable(task2 ${SOURCES2})
+add_executable(task3 ${SOURCES3})

@@ -29,10 +29,10 @@ int main(int argc, char* argv[]) {
         arr[index] = (int32_t) rand();// % 1000;  // easier to see if results is right
     }
 
-    //print_arr(arr, length);
+    print_arr(arr, length);
     double exec_time = merge_sort(arr, length);
     printf("time: %2.2f seconds\n", exec_time);
-    //print_arr(arr, length);
+    print_arr(arr, length);
     free(arr);
 
     return EXIT_SUCCESS;
