@@ -23,7 +23,7 @@ This exercise deals with the OpenMP flush directive and why it can be necessary.
 
 ### Tasks
 
-- Examine [flush.c](flush.c) and explain what the code does from an abstract, high-level perspective. What should happen here?
+- Examine [flush.c](task2/flush.c) and explain what the code does from an abstract, high-level perspective. What should happen here?
 - Compile this code with with gcc 8.2.0 and optimization level `-O3`. Run it in an interactive job (e.g. using `qrsh -pe openmp 8`) in a loop many times (e.g. write a loop in bash that executes it 1000 times). Run this loop repeatedly. What can you observe? **Note: Please quit your interactive job once you are done!**
 - Does this code require any `#pragma omp flush` directives? If it does, where are they necessary? If it does not, why not?
 
@@ -35,10 +35,10 @@ In this exercise, you will improve your implementation of merge sort.
 
 ### Tasks
 
-- Write a recursive implementation of your merge sort algorithm of the last assignment.
-- Provide both a sequential and a parallel version of the recursive implementation.
+- Write a recursive implementation of your merge sort algorithm of the last asimplementation.
 - Explain the OpenMP constructs you used for parallelization.
-- How does the performance of the recursive version compare to the iterative version, both sequential and parallel?
+- How does the performance of the recursive version compare to the iterative version,signment.
+- Provide both a sequential and a parallel version of the recursive  both sequential and parallel?
 - Enter the wall clock time of the sequential version, and the parallel version for 1 and 8 threads for n=100,000,000 on LCC2 to the comparison spreadsheet linked on Discord. 
 
 ## General Notes
