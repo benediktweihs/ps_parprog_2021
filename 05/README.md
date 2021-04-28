@@ -30,7 +30,7 @@ A large class of scientific applications are so-called stencil or structured gri
 
 ### Tasks
 
-- Given the code in [heat_stencil_2D.c](heat_stencil_2D.c), finish the implementation:
+- Given the code in [heat_stencil_2D.c](task2/heat_stencil_2D.c), finish the implementation:
   - implement the heat propagation by updating each cell with information from its neighbors. If in doubt, you can start with the formula given in https://en.wikipedia.org/wiki/Finite_difference_method#Example:_The_Laplace_operator
   - make sure the heat source stays the same through all iterations
   - if computing the value at the boundary, use temperature at the center position as the next value (e.g if you want to calculate A[0,1], use A[0,1] as the left neighbor cell instead of the non-existent A[-1,1])
