@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
     exclusive_prefix(arr, ret, length);
     double endTime = omp_get_wtime();
 
-    printf("Wall Time: %.5f seconds\nb[-1] = %d\n", endTime - startTime, ret[length-1]);
+	printf("Wall Time: %.5f seconds\nb[-1] = %d\n", endTime - startTime, ret[length-1]);
 	return EXIT_SUCCESS;
 
 cleanup_ret:

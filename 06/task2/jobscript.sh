@@ -26,10 +26,9 @@ module load gcc/8.2.0
 cmake ../CMakeLists.txt
 cmake --build ../cmake-build-default-lcc2
 
-../cmake-build-default-lcc2/task1 1000000000
+../cmake-build-default-lcc2/task2 8
 
 export OMP_NUM_THREADS=1
-../cmake-build-default-lcc2/task1_par 1000000000
-
+../cmake-build-default-lcc2/task2_par 8
 export OMP_NUM_THREADS=8
-../cmake-build-default-lcc2/task1_par 1000000000
+../cmake-build-default-lcc2/task2_par 8
