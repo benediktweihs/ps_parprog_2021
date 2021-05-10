@@ -42,7 +42,7 @@ if __name__ == "__main__":
             if lccLocal == 2: ax[lccLocal][j].set_title("Flag -O2")
             if lccLocal == 3: ax[lccLocal][j].set_title("Flag -O2 -O3")
     plt.tight_layout(pad=1.5)
-    plt.savefig("results.pdf", bbox_inches="tight")
+    plt.savefig("lcc2_results.pdf", bbox_inches="tight")
 
 
 

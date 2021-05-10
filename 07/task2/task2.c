@@ -12,9 +12,9 @@
 
 #define BUFSIZE 200
 #define REPETITIONS 1000000
-// the count of events for YYXX=1FC7 is the same for both compiler flags:
-// 231.936.208.991 r1FC7:u <- parallel
-// 529,280,010,583 r1FC7:u <- sequential
+// the lcc2_results are still correct (assert statement after inner for loop ensures that)
+// performance is worse
+
 
 int main(void){
 	int sizes_len = 128;
@@ -39,6 +39,7 @@ int main(void){
 		double startTime = omp_get_wtime();
 
 		for(int run = 0; run < REPETITIONS; ++run) {
+            #pragma omp for simd
 			for(int i = 0; i < sizes[size_index]; i++) {
 				a[i] += b[i] * c[i];
 			}
@@ -54,8 +55,8 @@ int main(void){
 	// get generic info for time
     time_t rawtime;
     struct tm * timeinfo;
-    time(&rawtime);
-    timeinfo = localtime (&rawtime);
+    time ( &rawtime );
+    timeinfo = localtime ( &rawtime );
 	char filename[BUFSIZE], buffer[BUFSIZE];
     strftime(buffer, sizeof(buffer),"%d_%m_%Y-%H_%M_%S", timeinfo);
 

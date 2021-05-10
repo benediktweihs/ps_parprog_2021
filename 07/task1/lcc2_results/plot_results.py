@@ -16,4 +16,4 @@ if __name__ == "__main__":
     plt.legend()
     plt.xlabel("n = len(a) = len(b) = len(c)")
     plt.ylabel("time in s")
-    plt.savefig("results.pdf", bbox_inches="tight")
+    plt.savefig("lcc2_results.pdf", bbox_inches="tight")

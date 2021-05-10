@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
     // fill array
     srand(time(NULL));
     for (long index = 0; index < length; index++){
-        arr[index] = (int32_t) rand();  // easier to see if results is right
+        arr[index] = (int32_t) rand();  // easier to see if lcc2_results is right
     }
     printf("sorting:\n");
 

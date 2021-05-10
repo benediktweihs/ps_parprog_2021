@@ -22,6 +22,5 @@
 # Use gcc 8.2.0 as the default gcc
 module load gcc/10.3.0
 
-./task1
 export OMP_NUM_THREADS=8
-./task1_vec
+./task2

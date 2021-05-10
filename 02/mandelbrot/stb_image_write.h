@@ -115,7 +115,7 @@ to -1; set to 0..5 to force a filter mode
    data, set the global variable 'stbi_write_tga_with_rle' to 0.
 
    JPEG does ignore alpha channels in input data; quality is between 1 and 100.
-   Higher quality looks better but results in a bigger image.
+   Higher quality looks better but lcc2_results in a bigger image.
    JPEG baseline (no JPEG progressive).
 
 CREDITS:

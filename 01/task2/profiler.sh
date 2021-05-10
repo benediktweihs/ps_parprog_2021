@@ -21,7 +21,7 @@ for exec in ${implementations[*]}; do
   echo "Profiling" $exec "implementation"
   echo "Iterating" ${iterations[$exec]} "time(s) for each OMP_NUM_THREADS"
   for i in {1..12}; do
-    # write results to files
+    # write lcc2_results to files
     echo -e "\n OMP_NUM_THREADS =" $i "\n \t iteration_no:"
     export OMP_NUM_THREADS=$i
     temp=0
@@ -49,7 +49,7 @@ then
     exit
 fi
 
-# plot results
+# plot lcc2_results
 for exec in ${implementations[*]}; do
   echo
   cat ./data/new2/$exec.txt
