@@ -1,0 +1,39 @@
+1.
+    Yes to both questions. That the compiler can parallelize this kind of code hase already been shown with the loop in
+    in line 14 of analysis.c. The compiler correctly performs vectorization. Manually it is also possible. Either by
+    manually vectoring, or splitting up both arrays and let threads work on them individually.
+
+2.
+    The inner loop is of course pointless but nevertheless:
+    ```C
+    for (int i=0; i<=N; i++) {
+        if(((i-4)%7)) continue;
+        for (int j=0; j<=N; j++) {
+            if(j%3) continue;
+            A[i] = 0;
+        }
+    }
+    ```
+    the above method is the 'naive' way
+    better: replace
+    N with N / 7
+    i=4 with i=0
+    i with i*7 + 4
+
+    and same for j - replace:
+    j with 3*j
+    N j<=N with j<=N/3
+
+3.
+    Yes it does
+    ```C
+    for(int i = 1; i < N; i++) {
+        for(int j = 1; j < M; j++) {
+            for(int k = 1; k < L; k++) {
+                a[i+1][j][k-1] = a[i][j][k] + 5;
+            }
+        }
+    }
+    ```
+    true distance vector: (1, 0, -1)
+    direction vector: (<, =, >)

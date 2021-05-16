@@ -1,0 +1,25 @@
+What information about dependence analysis can you find in the output? Can you identify any information pointing to successful or unsuccessful vectorization?
+
+    All of the information about auto-vectorization is given very clearly in the build log (see build.log). Print statements
+    cannot be vectorized.
+
+    The loop in line 22 doesn't seem to be vectorized because the arrays are accessed vie the modulo operator:
+    analysis.c:22:2: note: not vectorized: not suitable for gather load _6 = a[_5];
+    This could be improved by just realizing that the first argc values of the array a are just copied repeatedly into the
+    rest of the array (for `argc = 1` just set the whole array equal to a[0]).
+
+    The loop in line 18 is properly vectorized. The compiler understands
+    note: vectorization factor = 4
+    and hence makes sure that a[i-4] is updated *before* a[i] which is exactly how it has to be.
+
+    The loop in line 14 is simple to vectorize because the dependency graph is fully disconnected (which the compiler
+    realizes).s
+
+    For the first loop in the program there are no dependencies either (same as before).
+
+    Information about vectorization in build log: vectorization factor, performance gain, dependence analysis/distance
+
+
+Does the compiler perform any analysis beyond checking for dependencies and semantic correctness? What are your findings?
+    Yes. For `a[i-4] = a[i]` the compiler found the correct method to vectorize the loop in spite of a non-trivial
+    dependency graph. Also function calls are checked for vectorization (such as printf).
