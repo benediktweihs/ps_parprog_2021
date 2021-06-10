@@ -1,2 +1,0 @@
-## Usage
-The command `bash profiler.sh` was used to generate the data in the directories data and lcc2. Plots were generated using `./lcc2/plotter.py`. All results are located in `ex1.pdf` and `results.pdf`.

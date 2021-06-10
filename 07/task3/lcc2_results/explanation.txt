@@ -1,2 +1,0 @@
-The plot is constant because I didn't change the size of the array which was used to set the values of the __m128
-variables. I only changed the amount of ones contained in the beginning of each array.

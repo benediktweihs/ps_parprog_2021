@@ -1,3 +1,0 @@
-the plot shows threads (0 = serial) and y axis show time or ITER = 5,000,000 in seconds
-
-improving performance -> compile flags
