@@ -1,22 +1,22 @@
-//
-// Created by weihs on 10/06/2021.
-//
-
 #ifndef SHEET04_WEIHS_TAR_GZ_MAIN_H
 #define SHEET04_WEIHS_TAR_GZ_MAIN_H
 #include <stdlib.h>
 #include <stdio.h>
-#include "equation_of_motion.h"
+#include <math.h>
 
-typedef struct position {
+typedef struct column {
     long double x;
     long double y;
     long double z;
-} position;
+} column;
 
-typedef struct vector {
-	position x;
-    long double velocity;
-} vector;
+// point in phase-space
+typedef struct state {
+    column x;
+    column v;
+    double mass;
+} state;
 
+#include "equation_of_motion.h"
+#include "vector_operations.h"
 #endif // SHEET04_WEIHS_TAR_GZ_MAIN_H
