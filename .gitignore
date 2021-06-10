@@ -1,1 +1,5 @@
+.vscode
 .idea
+*/cmake-build-default-lcc2
+*/cmake-build-default
+*/cmake-build-debug
