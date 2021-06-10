@@ -1,0 +1,15 @@
+
+N=12
+time = 0.10967; result = 14200
+time = 0.11654; result = 14200 <- 1thread
+time = 0.02364; result = 14200 <- 8threads
+
+N=10
+time = 0.00354; result = 724
+time = 0.00374; result = 724 <- 1thread
+time = 0.00552; result = 724 <- 8threads
+
+N=8
+time = 0.00015; result = 92
+time = 0.00018; result = 92 <- 1thread
+time = 0.00026; result = 92 <- 8threads

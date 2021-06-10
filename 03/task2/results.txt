@@ -1,0 +1,17 @@
+on lcc2:
+
+task2.c:
+export OMP_NUM_THREADS=2 -> time: 10.36 seconds
+export OMP_NUM_THREADS=4 -> time: 5.43 seconds
+export OMP_NUM_THREADS=8 -> time: 2.82 seconds
+export OMP_NUM_THREADS=8 -> time: 2.83 seconds
+export OMP_NUM_THREADS=8 -> time: 2.82 seconds
+export OMP_NUM_THREADS=8 -> time: 2.83 seconds
+
+ex2.c:
+export OMP_NUM_THREADS=2 -> time: 21.32 seconds
+export OMP_NUM_THREADS=4 -> time: 22.04 seconds
+export OMP_NUM_THREADS=8 -> time: 24.18 seconds
+export OMP_NUM_THREADS=8 -> time: 24.71 seconds
+export OMP_NUM_THREADS=8 -> time: 23.63 seconds
+export OMP_NUM_THREADS=8 -> time: 24.63 seconds

@@ -1,0 +1,2 @@
+both code snippets have equally many cache misses (one for each iteration of the outer loop)
+cache misses should be (n/s)*n for both cases

@@ -1,0 +1,6 @@
+./merge_sort_iter -> time: 20.50 seconds
+./merge_sort_iter -> time: 20.62 seconds
+export OMP_NUM_THREADS=1 -> time: 26.26 seconds
+export OMP_NUM_THREADS=8 -> time: 8.17 seconds
+export OMP_NUM_THREADS=1 -> time: 26.26 seconds
+export OMP_NUM_THREADS=8 -> time: 8.18 seconds
