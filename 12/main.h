@@ -14,7 +14,7 @@ typedef struct column {
 typedef struct state {
     column x;
     column v;
-    double mass;
+    long double mass;
 } state;
 
 #include "equation_of_motion.h"

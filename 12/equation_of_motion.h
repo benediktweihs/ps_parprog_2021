@@ -4,7 +4,8 @@
 
 #ifndef INC_12_EQUATION_OF_MOTION_H
 #define INC_12_EQUATION_OF_MOTION_H
+#include "main.h"
 
-int simple(void);
+void evolve_state(state*, int, long double);
 
-#endif // INC_12_EQUATION_OF_MOTION_H
+#endif
