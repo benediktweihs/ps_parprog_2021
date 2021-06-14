@@ -50,6 +50,25 @@ column* compute_forces(state* state, int particle_number) {
 	return forces;
 }
 
+column* compute_forces_parallel(state* state, int particle_number) {
+	column force_per_particle = {0.L, 0.L, 0.L};
+	column* forces;
+	forces = (column*) malloc((size_t) particle_number * sizeof(column));
+
+	#pragma omp parallel for
+	for(int i = 0; i < particle_number; i++) {
+		for(int j = 0; j < particle_number; j++) {
+			if(i == j) continue;
+			force_per_particle = force(state[i], state[j]);
+			forces[i].x += force_per_particle.x;
+			forces[i].y += force_per_particle.y;
+			forces[i].z += force_per_particle.z;
+		}
+	}
+
+	return forces;
+}
+
 /**
  * dx = v dt -> x += v dt
  * dv = a dt = F/m dt -> v += F/m dt
@@ -57,6 +76,24 @@ column* compute_forces(state* state, int particle_number) {
 void evolve_state(state* state, int particle_number, long double dt) {
 	column* forces = compute_forces(state, particle_number);
 	
+	for(int i = 0; i < particle_number; i++) {
+		state[i].x.x += dt * state[i].v.x;
+		state[i].x.y += dt * state[i].v.y;
+		state[i].x.z += dt * state[i].v.z;
+		//printf("%Lf\n", forces[i].x);
+		//printf("%Lf\n", forces[i].y);
+		//printf("%Lf\n", forces[i].z);
+		state[i].v.x += dt * forces[i].x / state[i].mass;
+		state[i].v.y += dt * forces[i].y / state[i].mass;
+		state[i].v.z += dt * forces[i].z / state[i].mass;
+		//printf("\n");
+	}
+}
+
+void evolve_state_parallel(state* state, int particle_number, long double dt) {
+	column* forces = compute_forces(state, particle_number);
+	
+	#pragma omp parallel for
 	for(int i = 0; i < particle_number; i++) {
 		state[i].x.x += dt * state[i].v.x;
 		state[i].x.y += dt * state[i].v.y;

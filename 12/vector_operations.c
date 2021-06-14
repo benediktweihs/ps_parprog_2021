@@ -63,3 +63,30 @@ void analytically_stable(state* state, int particle_number, long double r) {
 		((state + i)->x).z = 0.L;
 	}
 }
+
+void random_initial_positions(state* state, int particle_number) {
+	// z in [0, 100)
+	long double limit = 100.L;
+	long double rand_pos = 0;
+
+	// seed
+	srand(time(0));
+
+	for(int i = 0; i < particle_number; i++) {
+		(state + i)->mass = 1.L;
+
+		rand_pos = (long double)rand() / (long double)RAND_MAX;
+		((state + i)->x).x = rand_pos * limit;
+		rand_pos = (long double)rand() / (long double)RAND_MAX;
+		((state + i)->x).y = rand_pos * limit;
+		rand_pos = (long double)rand() / (long double)RAND_MAX;
+		((state + i)->x).z = rand_pos * limit;
+
+		rand_pos = (long double)rand() / (long double)RAND_MAX;
+		((state + i)->v).x = rand_pos * limit;
+		rand_pos = (long double)rand() / (long double)RAND_MAX;
+		((state + i)->v).y = rand_pos * limit;
+		rand_pos = (long double)rand() / (long double)RAND_MAX;
+		((state + i)->v).z = rand_pos * limit;
+	}
+}

@@ -1,18 +1,28 @@
 #include "main.h"
 
-int main(void) {
-    // set up output
+int main(int argc, char* argv[]) {
+	long double dt;
+
+    if(argc != 2) {
+		printf("Usage: ./program_name <timestep>\n");
+		exit(EXIT_FAILURE);
+	}
+
+	// read input and convert to number
+	sscanf(argv[1], "%Lf", &dt);
+	printf("Timestep = %Lf\n", dt);
+
+	// set up output
 	FILE* output_file = fopen("./data/positions.dat", "w+");
 
 	// initialize particles and allocate corresponding memory
-	int particle_number = 3;
-	int iter = 2000000;
-	long double dt = .0001L;
-	long double r = (long double) 1/sqrt(3);
+	int particle_number = 5000;
+	long double total_time_simulated = 100.L;
+	int iter = (int) total_time_simulated / dt;
 	state* initial_conditions = (state*) malloc((size_t) particle_number * sizeof(state));
 
 	// determine initial conditions
-	analytically_stable(initial_conditions, particle_number, r);
+	random_initial_positions(initial_conditions, particle_number);
 
 	// simulate mass points
 	for(int i = 0; i < iter; i++) {

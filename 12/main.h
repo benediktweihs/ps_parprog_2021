@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include <time.h>
+#include <omp.h>
 
 typedef struct column {
     long double x;
@@ -19,4 +21,4 @@ typedef struct state {
 
 #include "equation_of_motion.h"
 #include "vector_operations.h"
-#endif // SHEET04_WEIHS_TAR_GZ_MAIN_H
+#endif

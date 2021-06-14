@@ -7,5 +7,6 @@
 #include "main.h"
 
 void evolve_state(state*, int, long double);
+void evolve_state_parallel(state*, int, long double);
 
 #endif

@@ -1,10 +1,11 @@
-CFLAGS=-Wall -std=gnu11 -Werror -Wextra -O2
+CFLAGS=-Wall -std=gnu11 -Werror -Wextra -O3 -fopenmp
 CC=gcc
 LIBS=-fopenmp -lm
-EXEC=analytically_stable main
+EXEC=analytically_stable main main_parallel
 TARGETS=analytically_stable equation_of_motion vector_operations
 OBJECTS_STABLE=analytically_stable.o equation_of_motion.o vector_operations.o
 OBJECTS=main.o equation_of_motion.o vector_operations.o
+OBJECTS_PARALLEL=main_parallel.o equation_of_motion.o vector_operations.o
 
 all: $(EXEC)
 
@@ -12,10 +13,13 @@ all: $(EXEC)
 	$(CC) $(CFLAGS) -c $<
 
 analytically_stable: $(OBJECTS_STABLE)
-	$(CC) $(CFLAGS) -o analytically_stable $^ $(LIBS)
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
 
 main: $(OBJECTS)
-	$(CC) $(CFLAGS) -o main $^ $(LIBS)
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
+
+main_parallel: $(OBJECTS_PARALLEL)
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
 
 .PHONY: clean
 clean:
