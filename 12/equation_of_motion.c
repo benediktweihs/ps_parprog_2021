@@ -55,7 +55,7 @@ column* compute_forces_parallel(state* state, int particle_number) {
 	column* forces;
 	forces = (column*) malloc((size_t) particle_number * sizeof(column));
 
-	#pragma omp parallel for
+	//#pragma omp parallel for
 	for(int i = 0; i < particle_number; i++) {
 		for(int j = 0; j < particle_number; j++) {
 			if(i == j) continue;
@@ -93,7 +93,7 @@ void evolve_state(state* state, int particle_number, long double dt) {
 void evolve_state_parallel(state* state, int particle_number, long double dt) {
 	column* forces = compute_forces(state, particle_number);
 	
-	#pragma omp parallel for
+	//#pragma omp parallel for
 	for(int i = 0; i < particle_number; i++) {
 		state[i].x.x += dt * state[i].v.x;
 		state[i].x.y += dt * state[i].v.y;

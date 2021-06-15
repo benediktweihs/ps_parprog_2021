@@ -6,8 +6,8 @@ int main(void) {
 
 	// initialize particles and allocate corresponding memory
 	int particle_number = 3;
-	int iter = 2000000;
-	long double dt = .0001L;
+	int iter = 10000000;
+	long double dt = .00001L;
 	long double r = (long double) 1/sqrt(3);
 	state* initial_conditions = (state*) malloc((size_t) particle_number * sizeof(state));
 

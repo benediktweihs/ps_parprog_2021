@@ -11,13 +11,13 @@ if __name__ == "__main__":
 
     # get data from data file in nice shape
     particle_number = 3
-    skip = 500
-    dt = .0001
+    skip = 5000
+    dt = .00001
     df = pd.read_table("./data/analytically_stable.dat", sep=" ", header=None)
     arr = df.to_numpy(dtype = float)
     n = arr.size
     arr = arr.reshape((int(n/(particle_number * 3)), particle_number, 3))
-    arr = arr[:-187000:skip]
+    arr = arr[:-5000000:skip]
 
     # create mov
     #outer = np.max(arr)

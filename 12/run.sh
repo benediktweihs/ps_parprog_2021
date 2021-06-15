@@ -17,5 +17,3 @@ python ./data/plot.py
 echo "--------------------"
 echo "Run main"
 echo "--------------------"
-
-#./main
