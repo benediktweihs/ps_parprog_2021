@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/benedikt/CLionProjects/ps_parprog_2021/04/task1/example.c
+stdio.h
+-
+stdlib.h
+-
+omp.h
+-
+limits.h
+-
+

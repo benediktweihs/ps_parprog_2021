@@ -1,0 +1,1 @@
+/usr/bin/cc -std=gnu11 -O3 -fopenmp -g -rdynamic CMakeFiles/task2.dir/task2/flush.c.o -o task2 

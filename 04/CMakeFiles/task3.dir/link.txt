@@ -1,0 +1,1 @@
+/usr/bin/cc -std=gnu11 -O3 -fopenmp -g -rdynamic CMakeFiles/task3.dir/task3/merge_recursive.c.o -o task3 
