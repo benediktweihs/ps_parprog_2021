@@ -1,5 +1,0 @@
-/home/benedikt/CLionProjects/ps_parprog_2021/04/CMakeFiles/rebuild_cache.dir
-/home/benedikt/CLionProjects/ps_parprog_2021/04/CMakeFiles/task1.dir
-/home/benedikt/CLionProjects/ps_parprog_2021/04/CMakeFiles/task2.dir
-/home/benedikt/CLionProjects/ps_parprog_2021/04/CMakeFiles/edit_cache.dir
-/home/benedikt/CLionProjects/ps_parprog_2021/04/CMakeFiles/task3.dir

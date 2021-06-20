@@ -1,1 +1,0 @@
-/usr/bin/cc -std=gnu11 -O3 -fopenmp -g -rdynamic CMakeFiles/task1.dir/task1/example.c.o -o task1 
